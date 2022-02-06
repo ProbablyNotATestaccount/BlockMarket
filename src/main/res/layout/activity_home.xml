@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="100dp"
+        android:layout_width="415dp"
+        android:layout_height="85dp"
         android:layout_marginTop="1dp"
         android:background="#E6DCC8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,29 +17,111 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/block_market_logo"
+            android:src="@drawable/block_market_logo"
+            android:contentDescription="Logo"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="61dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/account_icon"
+            android:onClick="OnAccClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Space
-        android:id="@+id/space"
+    <View
+        android:id="@+id/SpacerView"
         android:layout_width="403dp"
-        android:layout_height="28dp"
+        android:layout_height="10dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:background="@drawable/black_grad"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/space"
-        tools:text="Restaurants"
-        android:textStyle="bold"
+        android:text="Restaurants"
+        android:textColor="#000000"
         android:textSize="20dp"
-        android:textColor="#000000"/>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SpacerView"
+        tools:text="Restaurants" />
+
+    <ScrollView
+        android:id="@+id/FragSV"
+        android:layout_width="362dp"
+        android:layout_height="469dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/HomeFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </androidx.fragment.app.FragmentContainerView>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="411dp"
+        android:layout_height="131dp"
+        android:background="#F6F1F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FragSV">
+
+        <Button
+            android:id="@+id/HomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/home_button_prio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onHomeClick"/>
+
+        <Button
+            android:id="@+id/OrderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/order_button_noprio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/HomeButton"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onOrdersClick"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

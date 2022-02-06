@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().hide();
         List<AuthUI.IdpConfig> providers = Arrays.asList(
                 new AuthUI.IdpConfig.GoogleBuilder().build());
 
@@ -55,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
             // Successfully signed in
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if(user.getEmail().contains("@andrew.cmu.edu")){
-                Intent i  = new Intent(this,TestActivity.class);
-                startActivity(i);
+                beginNext();
             }
             else {
                 Log.d("SIGN_IN","FAILED");
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void beginNext(){
+        Intent i  = new Intent(this,HomeActivity.class);
+        startActivity(i);
+    }
 
 
 

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClaimOrder">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="411dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="1dp"
+        android:background="#33AA6600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/BackButtonOrder"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arrow_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onBackClick"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="408dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        android:background="#99AA6600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+        <Button
+            android:id="@+id/AccUpdateBtn"
+            android:layout_width="351dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/red_btn_tmp"
+            android:onClick="claimButtonClick"
+            android:text="Claim"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="364dp"
+        android:layout_height="392dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/round_btn_tmpl_faded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/ClaimRestTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="53dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="51dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ClaimAidTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/ClaimRestTV"
+            app:layout_constraintStart_toStartOf="@+id/ClaimRestTV"
+            app:layout_constraintTop_toBottomOf="@+id/ClaimRestTV" />
+
+        <TextView
+            android:id="@+id/ClaimDetTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/ClaimAidTV"
+            app:layout_constraintStart_toStartOf="@+id/ClaimAidTV"
+            app:layout_constraintTop_toBottomOf="@+id/ClaimAidTV" />
+
+        <TextView
+            android:id="@+id/ClaimPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ClaimDetTV"
+            app:layout_constraintStart_toStartOf="@+id/ClaimDetTV"
+            app:layout_constraintTop_toBottomOf="@+id/ClaimDetTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".ClaimOrder"></activity>
+        <activity android:name=".AccountUpdate" />
+        <activity android:name=".ConfirmOrderActivity" />
+        <activity android:name=".OrderingActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
